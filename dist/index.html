@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier Beet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9fff9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4caf50;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plantation</h1>
+        <form id="controlForm">
+            <label for="typePlante">TYPE DE PLANTE</label>
+            <select id="typePlante" name="typePlante">
+                <option value="beet">Beet</option>
+                <option value="carrot">Carrot</option>
+                <option value="lettuce">Lettuce</option>
+                <option value="tomato">Tomato</option>
+              
+            </select>
+            
+            <label for="demarre">DÉMARRÉ</label>
+            <input type="text" id="demarre" name="demarre" placeholder="jj/mm/aaaa">
+            
+          
+            
+            <label for="x">X (MM)</label>
+            <input type="number" id="x" name="x" value="2100">
+            
+            <label for="y">Y (MM)</label>
+            <input type="number" id="y" name="y" value="1100">
+            
+            <label for="z">Z (MM)</label>
+            <input type="number" id="z" name="z" value="0">
+            
+            <button type="button" id="abd">GO (X, Y)</button>
+            
+            <label for="rayon">RAYON (MM)</label>
+            <input type="number" id="rayon" name="rayon" value="25">
+            
+            <label for="depth">DEPTH (MM)</label>
+            <input type="number" id="depth" name="depth" value="0">
+            
+            <label for="statut">STATUT</label>
+            <select id="statut" name="statut">
+                <option value="planifie">Planifié</option>
+                <option value="planter">Planter</option>
+                <option value="Germee">Germee</option>
+                <option value="Recolter">Recolter</option>
+                <option value="Supprime">Suprimier</option>
+                <option value="Pending">Pending</option>
+                
+              
+            </select>
+            
+            <label for="eau">EAU</label>
+            <select id="eau" name="eau">
+                <option value="none">None</option>
+                <option value="Currently used with this crop">Currently used with this crop</option>
+                
+
+               
+            </select>
+            
+            <label for="etaler">ÉTALER</label>
+            <select id="etaler" name="etaler">
+                <option value="none">None</option>
+                <option value="Currently used with this crop">Currently used with this crop</option>
+              
+            </select>
+            
+            <label for="hauteur">HAUTEUR</label>
+            <select id="hauteur" name="hauteur">
+                <option value="Currently used with this crop">Currently used with this crop</option>
+              
+            </select>
+            
+            <div class="actions">
+                <button type="button" class="delete-btn">Supprimer</button>
+                <button type="submit" class="save-btn">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+   <script src="index.bundle.js"></script>
+</body>
+</html>
